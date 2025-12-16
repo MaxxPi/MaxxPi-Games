@@ -22,7 +22,7 @@
 .webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
 .webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
 .webgl-content .footer .title {margin-right: 10px; float: right;}
-.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}</style>
+.webgl-content .footer .fullscreen {background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAIAAAAnX375AAAACXBIWXMAAAsSAAALEgHS3X78AAABC0lEQVRYw2OUW3eZgb6AiYHuYNTKUStHrRy1koGBgYUSzRbC3LMt5fhYmZEF5ddfoaEvT7z9GnHk/rXPP+gasFc//Lj69jtdrewxlA5VEKSflcj2rX7wnsgQJj/58LEyawtzQiP1zdeS80/5WJmPuqsR1MjMH55FnpU///3f/PijKBsLIzNj3NGHP//9//nv/6FXX17/+INfI+NgbxWgZUFaWaktwAG3b6W9Yo+hNIUWE7ZyhY0iHyszxD4tXo5QBcGV9oq0LfAgljEwMGjxQr1Lat4nJ5PALYPkv5LzT+mXfCi3j2QrtYU54amJTlZq8XKssFG0EOambVwSrP9GGyKjVo5aOWrl0LASABsZTYue2xSgAAAAAElFTkSuQmCC'); width: 38px; float: right;}</style>
     <script src="https://rawcdn.githack.com/Jokarcana/Tanuki-Sunset/a5b13b1279016c9bd123f06a4886b5987fa06dc5/TemplateData/UnityProgress.js"></script>
     <script src="https://rawcdn.githack.com/Jokarcana/Tanuki-Sunset/a5b13b1279016c9bd123f06a4886b5987fa06dc5/Build/UnityLoader.js"></script>
     <script>
