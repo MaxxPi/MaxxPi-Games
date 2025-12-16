@@ -412,7 +412,6 @@ a:hover, a:active {
   overflow: hidden;
 }
 </style>
-  <link rel="icon" href="webapp/favicon.ico">
 
   <!-- POKI SDK -->
   <script src="//game-cdn.poki.com/scripts/v2/poki-sdk.js" ></script>
