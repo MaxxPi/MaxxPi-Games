@@ -959,7 +959,8 @@ else if(elem["msRequestFullscreen"])ret=elem["msRequestFullscreen"](opts);else i
 "fullscreen":false})}else{let ret;if(document["exitFullscreen"])ret=document["exitFullscreen"]();else if(document["mozCancelFullScreen"])ret=document["mozCancelFullScreen"]();else if(document["msExitFullscreen"])ret=document["msExitFullscreen"]();else if(document["webkitCancelFullScreen"])ret=document["webkitCancelFullScreen"]();if(ret instanceof Promise)ret.catch(noop)}}_OnSetHash(e){location.hash=e["hash"]}_OnHashChange(){this.PostToRuntime("hashchange",{"location":location.toString()})}_OnSetDocumentCSSStyle(e){const prop=
 e["prop"];const value=e["value"];const selector=e["selector"];const isAll=e["is-all"];try{const arr=elemsForSelector(selector,isAll);for(const e of arr)if(prop.startsWith("--"))e.style.setProperty(prop,value);else e.style[prop]=value}catch(err){console.warn("[Browser] Failed to set style: ",err)}}_OnGetDocumentCSSStyle(e){const prop=e["prop"];const selector=e["selector"];try{const elem=document.querySelector(selector);if(elem){const computedStyle=window.getComputedStyle(elem);return{"isOk":true,"result":computedStyle.getPropertyValue(prop)}}else return{"isOk":false}}catch(err){console.warn("[Browser] Failed to get style: ",
 err);return{"isOk":false}}}};self.RuntimeInterface.AddDOMHandlerClass(HANDLER_CLASS)};</script>
-	<script src="https://274105583-163826330694719375.preview.editmysite.com/uploads/b/139890129-613310438668365288/files/scripts/register-sw.js" type="module"></script>
+<!--register-sw.js-->
+	<script>'use strict';{window.C3_RegisterSW=async function C3_RegisterSW(){if(!navigator.serviceWorker)return;try{const reg=await navigator.serviceWorker.register("sw.js",{scope:"./"});console.info("Registered service worker on "+reg.scope)}catch(err){console.warn("Failed to register service worker: ",err)}}};</script>
 
 	
 </body>
