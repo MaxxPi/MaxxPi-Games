@@ -7,6 +7,7 @@
 
 <meta name="generator" content="Scirra Construct">
 
+<!--style.css--> 
 <style>html, body {
 	padding: 0;
 	margin: 0;
@@ -79,7 +80,7 @@ html, body, canvas {
 	content: " â€¢ ";
 }
 
-</style> <!--style.css-->
+</style> 
 <script type="text/javascript">
         function analytics() {sdk.showBanner();};
         function analytics_ID() {sdk.showBanner();};
