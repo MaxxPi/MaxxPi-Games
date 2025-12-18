@@ -61,7 +61,37 @@ height:screen.height?screen.height:0,browser:i,browserVersion:s,mobile:l,os:u,os
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
         <div class="title">Tanuki Sunset</div>
-      </div>
     </div>
+</div>
+<script>// Define the URLs for your three WASM files
+const wasmUrls = [
+    'https://rawcdn.githack.com/Jokarcana/Tanuki-Sunset/a5b13b1279016c9bd123f06a4886b5987fa06dc5/Build/WebGL.wasm.framework.unityweb', // Replace with your actual URLs
+    'https://rawcdn.githack.com/Jokarcana/Tanuki-Sunset/a5b13b1279016c9bd123f06a4886b5987fa06dc5/Build/WebGL.wasm.code.unityweb',
+    'https://rawcdn.githack.com/Jokarcana/Tanuki-Sunset/a5b13b1279016c9bd123f06a4886b5987fa06dc5/Build/WebGL.data.unityweb'
+];
+
+// Function to fetch, compile, instantiate, and run a WASM module
+async function loadWasm(url, elementId) {
+    try {
+        // Use WebAssembly.instantiateStreaming for efficiency
+        const fetchPromise = fetch(url);
+        const { instance } = await WebAssembly.instantiateStreaming(fetchPromise /*, importObject */);
+
+        // Access an exported function (replace 'yourExportedFunction' with the actual name)
+        const result = instance.exports.yourExportedFunction( /* arguments if needed */ ); 
+
+        // Display the result in the HTML
+        document.getElementById(elementId).textContent = result;
+    } catch (error) {
+        console.error(`Error loading WASM module from ${url}:`, error);
+        document.getElementById(elementId).textContent = 'Error loading module';
+    }
+}
+
+// Load each WASM module
+loadWasm(wasmUrls[0], 'result1');
+loadWasm(wasmUrls[1], 'result2');
+loadWasm(wasmUrls[2], 'result3');
+</script>
   </body>
 </html>
